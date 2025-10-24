@@ -3,7 +3,7 @@ pipeline {
     agent any
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials')
-        DOCKER_IMAGE = 'hectorproko//helloWorldPython'
+        DOCKER_IMAGE = 'hectorproko/helloWorldPython'
     }
     stages {
         stage('Hector - Build Docker Image') {
