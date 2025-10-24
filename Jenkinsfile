@@ -1,6 +1,5 @@
 pipeline {
-    // agent { label 'AgentDocker' }
-    agent any
+    agent { label 'AgentDocker' }
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials')
         DOCKER_IMAGE = 'hectorproko/helloWorldPython'
