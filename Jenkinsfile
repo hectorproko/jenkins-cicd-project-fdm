@@ -22,6 +22,14 @@ pipeline {
                 sh 'docker push ${DOCKER_IMAGE}:latest'
             }
         }
+        stage('Deploy & Run Showcase') {
+            steps {
+                script {
+                    echo "🚀 Running Hello World container"
+                    sh 'docker run --rm ${DOCKER_IMAGE}:latest'
+                }
+            }
+        }
     }
     post {
         always {
